@@ -3,6 +3,7 @@ import Koa from "koa";
 import createJsonProxy from "./lib/json.js";
 import createFileProxy from "./lib/file.js";
 
+const PORT = process.env.PORT || 3000;
 const PROXY_TARGET = process.env.REMOTE_UPDATE_CENTER || "https://updates.jenkins.io/";
 const RETURN = process.env.LOCAL_UPDATE_CENTER || "http://localhost:3000";
 const CACHE_DIR = process.env.CACHE_DIR || "cache";
@@ -29,4 +30,6 @@ app.use(async (ctx) => {
   }
 });
 
-app.listen(3000);
+app.listen(PORT);
+
+console.log("Listening on port", PORT);

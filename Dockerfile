@@ -4,9 +4,11 @@ FROM node:16-alpine
 ENV CACHE_DIR="/cache"
 VOLUME [ "/cache" ]
 
-COPY package.json yarn.lock ./
-COPY lib .
+COPY package.json yarn.lock index.js ./
+COPY lib/* ./lib
 
 EXPOSE 3000 
 
 RUN yarn install
+
+CMD [ "index.js" ]
