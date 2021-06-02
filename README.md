@@ -8,13 +8,13 @@ This is currently a very simple configuration that is supposed to work in enviro
 
 ## Usage
 
-The easiest to get started is to use the docker image (for now by doing `git clone` and `docker build --tag=jenkins-proxy`)
+The easiest to get started is to use the docker image
 
 ```bash
 docker run --rm -it -p 3000:3000 \
   -v "$PWD/cache:/cache" \
   -e LOCAL_UPDATE_CENTER=http://192.168.1.10:3000 \
-  jenkins-proxy
+  onigoetz/jenkins-update-center-proxy
 ```
 
 ## Options
@@ -34,5 +34,5 @@ yarn install
 LOCAL_UPDATE_CENTER=http://192.168.1.10:3000 node index.js &
 
 cd integration
-docker build --no-cache -t jenkins:jcasc . > build.txt 2>&1
+docker build --no-cache . > build.txt 2>&1
 ```
