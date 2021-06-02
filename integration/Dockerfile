@@ -1,7 +1,8 @@
 FROM jenkins/jenkins:2.277.4-lts-jdk11
 
 # Specify custom update center
-ENV JENKINS_UC="http://192.168.1.10:3000"
+ARG LOCAL_IP=127.0.0.1
+ENV JENKINS_UC="http://$LOCAL_IP:3000"
 
 # Install plugins
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt

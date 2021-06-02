@@ -8,7 +8,7 @@ This is currently a very simple configuration that is supposed to work in enviro
 
 ## Usage
 
-The easiest to get started is to use the docker image
+The easiest to get started is to use the [docker image](https://hub.docker.com/r/onigoetz/jenkins-update-center-mirror)
 
 ```bash
 docker run --rm -it -p 3000:3000 \
@@ -29,10 +29,9 @@ docker run --rm -it -p 3000:3000 \
 
 ## Testing
 
+Currently we only have one integration test that starts the application, installs a few Jenkins plugins and checks that they are correctly cached.
+
 ```bash
 yarn install
-LOCAL_UPDATE_CENTER=http://192.168.1.10:3000 node index.js &
-
-cd integration
-docker build --no-cache . > build.txt 2>&1
+yarn test
 ```
