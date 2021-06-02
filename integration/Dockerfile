@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:2.277.4-lts-jdk11
+FROM jenkins/jenkins:2.289.1-lts-jdk11
 
 # Specify custom update center
 ENV JENKINS_UC="http://192.168.1.10:3000"
