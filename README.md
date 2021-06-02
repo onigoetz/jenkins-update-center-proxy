@@ -25,3 +25,13 @@ docker run --rm -it -p 3000:3000 \
 | `REMOTE_UPDATE_CENTER` | `https://updates.jenkins.io/` | The update center to take the files from                            |
 | `CACHE_DIR`            | `cache`                       | The cache dir, no need to change this within the Docker image       |
 | `PORT`                 | `3000`                        | The port to listen on                                               |
+
+## Testing
+
+```bash
+yarn install
+LOCAL_UPDATE_CENTER=http://192.168.1.10:3000 node index.js &
+
+cd integration
+docker build --no-cache -t jenkins:jcasc . > build.txt 2>&1
+```
