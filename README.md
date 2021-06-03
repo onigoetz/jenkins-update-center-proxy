@@ -9,7 +9,7 @@ This is currently a very simple configuration that is supposed to work in enviro
 
 ## Usage
 
-The easiest to get started is to use the [docker image](https://hub.docker.com/r/onigoetz/jenkins-update-center-mirror)
+The easiest to get started is to use the [docker image](https://hub.docker.com/r/onigoetz/jenkins-update-center-proxy)
 
 ```bash
 docker run --rm -it -p 3000:3000 \
