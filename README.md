@@ -2,7 +2,8 @@
 
 A mirror for Jenkins Update Center.
 
-Caches all `.hpi` files that have a specific version, doesn't cache the ones with a `/latest/` version.
+Caches all `.hpi` files locally for faster download next time.
+Very practical if you want to build your CI environment on your CI environment.
 
 This is currently a very simple configuration that is supposed to work in environments where Jenkins doesn't have internet access.
 
