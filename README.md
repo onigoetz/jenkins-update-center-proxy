@@ -9,6 +9,8 @@ This is currently a very simple configuration that is supposed to work in enviro
 
 ## Usage
 
+### Starting the Proxy
+
 The easiest to get started is to use the [docker image](https://hub.docker.com/r/onigoetz/jenkins-update-center-proxy)
 
 ```bash
@@ -17,6 +19,24 @@ docker run --rm -it -p 3000:3000 \
   -e LOCAL_UPDATE_CENTER=http://192.168.1.10:3000 \
   onigoetz/jenkins-update-center-proxy
 ```
+
+Be extra careful, about setting `LOCAL_UPDATE_CENTER`, is this should be the public URL of where this Proxy will be exposed.
+This is needed for redirects.
+
+### Using the Proxy
+
+In my case, I use it to build Jenkins Docker images with all plugins preinstalled, this is how it works :
+
+```
+# Define the update center
+ENV JENKINS_UC="http://192.168.1.10:3000"
+
+# Install plugins
+COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
+RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
+```
+
+Notice that the URL is the same as the `LOCAL_UPDATE_CENTER` above.
 
 ## Options
 
