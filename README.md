@@ -30,8 +30,10 @@ In my case, I use it to build Jenkins Docker images with all plugins preinstalle
 ```
 # Define the update center
 ENV JENKINS_UC="http://192.168.1.10:3000"
+ENV JENKINS_UC_EXPERIMENTAL="http://192.168.1.10:3000/experimental"
+ENV JENKINS_PLUGIN_INFO="http://192.168.1.10:3000/current/plugin-versions.json"
 
-# Install plugins
+# Install plugins ( either with install-plugins.sh or jenkins-plugin-cli )
 COPY plugins.txt /usr/share/jenkins/ref/plugins.txt
 RUN /usr/local/bin/install-plugins.sh < /usr/share/jenkins/ref/plugins.txt
 ```
