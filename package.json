@@ -4,8 +4,7 @@
     "got": "11.8.2",
     "hpagent": "0.1.2",
     "http-proxy": "1.18.1",
-    "koa": "2.13.1",
-    "koa-send": "5.0.1"
+    "koa": "2.13.1"
   },
   "scripts": {
     "start": "node index.js",

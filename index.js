@@ -14,7 +14,6 @@ const app = new Koa();
 app.use(accesslog);
 
 app.use(async (ctx) => {
-  ctx.externalRequests = 0;
   if (/\.json(?:$|\?.*)/.test(ctx.req.url)) {
     return jsonProxy(ctx);
   }
