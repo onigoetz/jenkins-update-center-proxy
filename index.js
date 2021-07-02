@@ -1,5 +1,7 @@
 import Koa from "koa";
+import * as createError from "http-errors";
 
+import accesslog from "./lib/log.js";
 import createJsonProxy from "./lib/json.js";
 import createFileProxy from "./lib/file.js";
 import { PORT } from "./lib/config.js";
@@ -9,29 +11,7 @@ const fileProxy = createFileProxy();
 
 const app = new Koa();
 
-app.use(async (ctx, next) => {
-  const start = Date.now();
-  try {
-    await next();
-  } catch(e) {
-    console.log("Failed request", e.message);
-
-    // Rethrow the error to make sure a 
-    // response is sent if it wasn't already
-    throw e;
-  } finally {
-    const ms = Date.now() - start;
-
-    let cacheInfo = '';
-    if (ctx.hasOwnProperty("cacheHit")) {
-      cacheInfo = ctx.cacheHit ? " (Cache HIT)" : " (Cache MISS)"
-    }
-
-    const externalRequests = ` (${ctx.externalRequests} external requests)`
-
-    console.log(`${ctx.method} ${ctx.response.status} ${ctx.url}${externalRequests}${cacheInfo} - ${ms}ms`);
-  }
-});
+app.use(accesslog);
 
 app.use(async (ctx) => {
   ctx.externalRequests = 0;
@@ -46,5 +26,14 @@ app.use(async (ctx) => {
 });
 
 app.listen(PORT);
+
+app.on("error", (err, ctx) => {
+  if (createError.isHttpError(err) && err.status < 500) {
+    // Ignore 40* errors, they aren't unexpected behaviour
+    return;
+  }
+
+  console.log(`Error while handling '${ctx.method} ${ctx.path}':\n`, err);
+});
 
 console.log("Listening on port", PORT);
