@@ -23,17 +23,11 @@ docker build --no-cache --build-arg LOCAL_IP=$IP integration
 
 echo
 echo "=> Should find three files in cache"
-HPIFILES=$(find cache -name "*.hpi" | wc -l | xargs)
-if [[ $HPIFILES -eq 3 ]]; then
+JSONFILES=$(find cache -name "*.json" | wc -l | xargs)
+if [[ $JSONFILES -eq 3 ]]; then
     echo "OK"
 else
-    echo "Should find 3 *.hpi files in cache but found $HPIFILES: "
-    find cache -name "*.hpi"
+    echo "Should find 3 *.json files in cache but found $JSONFILES: "
+    find cache -name "*.json"
     exit 1
 fi
-
-echo
-echo "=> Files in cache should be valid zip files"
-find cache -name "*.hpi" -print0 | xargs -0 -n1 unzip -t
-
-echo "OK"
