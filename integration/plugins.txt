@@ -1,2 +1,2 @@
 ant
-antisamy-markup-formatter:2.1
+antisamy-markup-formatter:2.7
