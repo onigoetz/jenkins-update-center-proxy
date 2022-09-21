@@ -18,6 +18,7 @@ trap cleanup EXIT
 
 echo
 echo "=> Build Jenkins docker image with three plugins"
+export BUILDKIT_PROGRESS=plain
 docker build --no-cache --build-arg LOCAL_IP=$IP integration
 
 
