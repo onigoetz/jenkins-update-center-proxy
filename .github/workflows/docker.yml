@@ -32,7 +32,7 @@ jobs:
           images: ${{ secrets.DOCKER_HUB_USERNAME }}/jenkins-update-center-proxy
           tags: |
             type=ref,event=branch
-            type=match,pattern=\d.\d.\d
+            type=match,pattern=\d+.\d+.\d+
 
       - name: Build and push
         id: docker_build
