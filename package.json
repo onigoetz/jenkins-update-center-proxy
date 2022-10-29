@@ -2,7 +2,7 @@
   "type": "module",
   "dependencies": {
     "got": "12.5.2",
-    "hpagent": "1.0.0",
+    "hpagent": "1.2.0",
     "koa": "2.13.4"
   },
   "scripts": {
