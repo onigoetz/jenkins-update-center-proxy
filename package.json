@@ -7,6 +7,11 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test": "bash test.sh"
+    "test:unit": "rm -rf cache/plugins && REMOTE_UPDATE_CENTER=http://localhost:65432/ GLOBAL_TIMEOUT=200 ava",
+    "test:e2e": "bash test.sh",
+    "test": "yarn test:unit && yarn test:e2e"
+  },
+  "devDependencies": {
+    "ava": "^5.2.0"
   }
 }
