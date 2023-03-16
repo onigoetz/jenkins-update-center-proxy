@@ -3,7 +3,7 @@
   "dependencies": {
     "got": "12.5.2",
     "hpagent": "1.2.0",
-    "koa": "2.13.4"
+    "koa": "2.14.1"
   },
   "scripts": {
     "start": "node index.js",
