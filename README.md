@@ -49,6 +49,7 @@ Notice that the URL is the same as the `LOCAL_UPDATE_CENTER` above.
 | `CACHE_DIR`            | `cache`                       | The cache dir, no need to change this within the Docker image       |
 | `PORT`                 | `3000`                        | The port to listen on                                               |
 | `HTTP_PROXY`           | `null`                        | If you're in a corporate environment that needs a proxy             |
+| `GLOBAL_TIMEOUT`       | `25000`                       | The timeout (in ms) for remote requests                             |
 
 ## Testing
 
