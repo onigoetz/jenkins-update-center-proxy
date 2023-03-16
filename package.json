@@ -1,7 +1,7 @@
 {
   "type": "module",
   "dependencies": {
-    "got": "12.5.2",
+    "got": "12.6.0",
     "hpagent": "1.2.0",
     "koa": "2.14.1"
   },
