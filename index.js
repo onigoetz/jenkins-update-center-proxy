@@ -1,8 +1,9 @@
 import Koa from "koa";
 import * as createError from "http-errors";
 
-import accesslog from "./lib/log.js";
-import proxyMiddleware from "./lib/proxyMiddleware.js";
+import accesslog from "./lib/middlewares/log.js";
+import proxy from "./lib/middlewares/proxy.js";
+import health from "./lib/middlewares/health.js";
 
 import { PORT } from "./lib/config.js";
 
@@ -10,7 +11,9 @@ const app = new Koa();
 
 app.use(accesslog);
 
-app.use(proxyMiddleware);
+app.use(health);
+
+app.use(proxy);
 
 app.listen(PORT);
 
