@@ -824,6 +824,13 @@ keygrip@~1.1.0:
   dependencies:
     tsscmp "1.0.6"
 
+keyv-lru@3.0.4:
+  version "3.0.4"
+  resolved "https://registry.yarnpkg.com/keyv-lru/-/keyv-lru-3.0.4.tgz#95ec97077a18d9a6ceb16a48b6530c26c5ce9099"
+  integrity sha512-4XALKaBM/3nZr0o0Hskq+SPS2tBkfZXYQRDl0SqywIimZf0wrrMEgSfoOM7eNuKXnICIOHs3exPucGKDYAp/8g==
+  dependencies:
+    tiny-lru "^1.6.1"
+
 keyv@^4.5.2:
   version "4.5.2"
   resolved "https://registry.yarnpkg.com/keyv/-/keyv-4.5.2.tgz#0e310ce73bf7851ec702f2eaf46ec4e3805cce56"
@@ -1307,6 +1314,11 @@ time-zone@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/time-zone/-/time-zone-1.0.0.tgz#99c5bf55958966af6d06d83bdf3800dc82faec5d"
   integrity sha512-TIsDdtKo6+XrPtiTm1ssmMngN1sAhyKnTO2kunQWqNPWIVvCm15Wmw4SWInwTVgJ5u/Tr04+8Ei9TNcw4x4ONA==
+
+tiny-lru@^1.6.1:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/tiny-lru/-/tiny-lru-1.6.4.tgz#ee5226a29a7b734ef8aee47673dd5079bf987441"
+  integrity sha512-Et+J3Css66XPSLWjLF9wmgbECsGiExlEL+jxsFerTQF6N6dpxswDTPAfIrAbQKO5c1uhgq2xvo5zMk1W+kBDNA==
 
 to-regex-range@^5.0.1:
   version "5.0.1"

@@ -59,3 +59,16 @@ Currently we only have one integration test that starts the application, install
 yarn install
 yarn test
 ```
+
+Some URLs to try :
+
+```
+GET /update-center.json?version=2.387.1
+GET /dynamic-stable-2.387.1/update-center.json
+GET /experimental/update-center.json
+GET /current/plugin-versions.json
+
+GET /download/plugins/ant/481.v7b_09e538fcca/ant.hpi
+GET /download/plugins/antisamy-markup-formatter/159.v25b_c67cd35fb_/antisamy-markup-formatter.hpi
+GET /download/plugins/structs/324.va_f5d6774f3a_d/structs.hpi
+```
