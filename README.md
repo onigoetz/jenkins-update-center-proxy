@@ -1,5 +1,10 @@
 # Jenkins Update Center Proxy
 
+[![Latest version](https://img.shields.io/github/release/onigoetz/jenkins-update-center-proxy.svg?style=flat-square)](https://github.com/onigoetz/jenkins-update-center-proxy/releases)
+![License](https://img.shields.io/github/license/onigoetz/jenkins-update-center-proxy?style=flat-square)
+![GitHub Workflow Status](https://img.shields.io/github/actions/workflow/status/onigoetz/jenkins-update-center-proxy/nodejs.yml?style=flat-square&logo=github)
+[![Docker Pulls](https://img.shields.io/docker/pulls/onigoetz/jenkins-update-center-proxy?style=flat-square&logo=docker)](https://hub.docker.com/r/onigoetz/jenkins-update-center-proxy)
+
 A mirror for Jenkins Update Center.
 
 Caches all `.hpi` files locally for faster download next time.
