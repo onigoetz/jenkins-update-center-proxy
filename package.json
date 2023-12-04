@@ -13,6 +13,6 @@
     "test": "yarn test:unit && yarn test:e2e"
   },
   "devDependencies": {
-    "ava": "^5.2.0"
+    "ava": "^6.0.0"
   }
 }
