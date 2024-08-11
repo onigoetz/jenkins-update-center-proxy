@@ -1,3 +1,6 @@
 cache
 node_modules
 integration/build.txt
+
+.yarn/cache
+.yarn/*.gz
