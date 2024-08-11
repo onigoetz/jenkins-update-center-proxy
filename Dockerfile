@@ -11,6 +11,7 @@ COPY lib ./lib
 
 EXPOSE 3000 
 
-RUN yarn install --production
+RUN corepack enable
+RUN yarn workspaces focus --production
 
 CMD [ "index.js" ]
