@@ -23,12 +23,12 @@ docker build --no-cache --build-arg LOCAL_IP=$IP integration
 
 
 echo
-echo "=> Should find three files in cache"
+echo "=> Should find four files in cache"
 JSONFILES=$(find cache -name "*.json" | wc -l | xargs)
-if [[ $JSONFILES -eq 3 ]]; then
+if [[ $JSONFILES -eq 4 ]]; then
     echo "OK"
 else
-    echo "Should find 3 *.json files in cache but found $JSONFILES: "
+    echo "Should find 4 *.json files in cache but found $JSONFILES: "
     find cache -name "*.json"
     exit 1
 fi
