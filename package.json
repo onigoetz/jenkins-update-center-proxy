@@ -4,7 +4,7 @@
     "got": "14.4.4",
     "hpagent": "1.2.0",
     "keyv-lru": "3.0.4",
-    "koa": "2.15.3"
+    "koa": "2.16.2"
   },
   "scripts": {
     "start": "node index.js",
