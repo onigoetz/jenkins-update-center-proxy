@@ -7,11 +7,13 @@ VOLUME [ "/cache" ]
 WORKDIR /app
 
 COPY package.json yarn.lock index.js ./
+COPY .yarnrc.yml ./
+COPY .yarn/releases ./.yarn/releases
 COPY lib ./lib
 
 EXPOSE 3000 
 
 RUN corepack enable
-RUN yarn workspaces focus --production
+RUN yarn workspaces focus --all --production
 
 CMD [ "index.js" ]
