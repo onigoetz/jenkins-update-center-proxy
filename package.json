@@ -1,7 +1,7 @@
 {
   "type": "module",
   "dependencies": {
-    "got": "14.5.0",
+    "got": "14.6.0",
     "hpagent": "1.2.0",
     "keyv-lru": "3.0.4",
     "koa": "3.0.1"
