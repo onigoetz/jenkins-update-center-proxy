@@ -1,10 +1,10 @@
 {
   "type": "module",
   "dependencies": {
-    "got": "14.6.0",
+    "got": "14.6.1",
     "hpagent": "1.2.0",
     "keyv-lru": "3.0.4",
-    "koa": "3.0.3"
+    "koa": "3.1.1"
   },
   "scripts": {
     "start": "node index.js",
