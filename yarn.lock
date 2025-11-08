@@ -382,6 +382,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"byte-counter@npm:^0.1.0":
+  version: 0.1.0
+  resolution: "byte-counter@npm:0.1.0"
+  checksum: 10c0/2e7b9cf902d06a6601f8ab893964a8b6b9e2b2dfc60fcee0d340e50b95aa3dc77c4d34ddf3e63cc374b4e5b1d0d694a942de6fbe8ee95d39418f3fdff666b6a4
+  languageName: node
+  linkType: hard
+
 "cacheable-lookup@npm:^7.0.0":
   version: 7.0.0
   resolution: "cacheable-lookup@npm:7.0.0"
@@ -912,12 +919,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"got@npm:14.6.1":
-  version: 14.6.1
-  resolution: "got@npm:14.6.1"
+"got@npm:14.6.2":
+  version: 14.6.2
+  resolution: "got@npm:14.6.2"
   dependencies:
     "@sindresorhus/is": "npm:^7.0.1"
     "@szmarczak/http-timer": "npm:^5.0.1"
+    byte-counter: "npm:^0.1.0"
     cacheable-lookup: "npm:^7.0.0"
     cacheable-request: "npm:^13.0.12"
     decompress-response: "npm:^10.0.0"
@@ -928,7 +936,7 @@ __metadata:
     p-cancelable: "npm:^4.0.1"
     responselike: "npm:^4.0.2"
     type-fest: "npm:^4.26.1"
-  checksum: 10c0/3569d53a9d344e72fa77a2c4a8fa96a4963da3896aad37b552c589d020e2d310829be4d2ca6e46e5a3f9b4dcf16ce0176c36d3c6d5ba6d9d37e0bc6b4610f1f4
+  checksum: 10c0/c7d7183df081e056154ed335309a45b74255f503261dd6095e5da5fabbb1a250275286cf1aa1402855f424972bd9390ea733db075046a1d475fa7082d5f98482
   languageName: node
   linkType: hard
 
@@ -1622,7 +1630,7 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     ava: "npm:^6.0.0"
-    got: "npm:14.6.1"
+    got: "npm:14.6.2"
     hpagent: "npm:1.2.0"
     keyv-lru: "npm:3.0.4"
     koa: "npm:3.1.1"
