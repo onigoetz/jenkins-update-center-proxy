@@ -123,15 +123,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@szmarczak/http-timer@npm:^5.0.1":
-  version: 5.0.1
-  resolution: "@szmarczak/http-timer@npm:5.0.1"
-  dependencies:
-    defer-to-connect: "npm:^2.0.1"
-  checksum: 10c0/4629d2fbb2ea67c2e9dc03af235c0991c79ebdddcbc19aed5d5732fb29ce01c13331e9b1a491584b9069bd6ecde6581dcbf871f11b7eefdebbab34de6cf2197e
-  languageName: node
-  linkType: hard
-
 "@types/estree@npm:^1.0.0":
   version: 1.0.8
   resolution: "@types/estree@npm:1.0.8"
@@ -628,13 +619,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"defer-to-connect@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "defer-to-connect@npm:2.0.1"
-  checksum: 10c0/625ce28e1b5ad10cf77057b9a6a727bf84780c17660f6644dab61dd34c23de3001f03cedc401f7d30a4ed9965c2e8a7336e220a329146f2cf85d4eddea429782
-  languageName: node
-  linkType: hard
-
 "delegates@npm:^1.0.0":
   version: 1.0.0
   resolution: "delegates@npm:1.0.0"
@@ -919,12 +903,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"got@npm:14.6.2":
-  version: 14.6.2
-  resolution: "got@npm:14.6.2"
+"got@npm:14.6.3":
+  version: 14.6.3
+  resolution: "got@npm:14.6.3"
   dependencies:
     "@sindresorhus/is": "npm:^7.0.1"
-    "@szmarczak/http-timer": "npm:^5.0.1"
     byte-counter: "npm:^0.1.0"
     cacheable-lookup: "npm:^7.0.0"
     cacheable-request: "npm:^13.0.12"
@@ -936,7 +919,7 @@ __metadata:
     p-cancelable: "npm:^4.0.1"
     responselike: "npm:^4.0.2"
     type-fest: "npm:^4.26.1"
-  checksum: 10c0/c7d7183df081e056154ed335309a45b74255f503261dd6095e5da5fabbb1a250275286cf1aa1402855f424972bd9390ea733db075046a1d475fa7082d5f98482
+  checksum: 10c0/b5a2a0a8bfd44399f804c0875d0cfe832c32dd0067a25a965c0800ea58742a42135272dc1b30da477d70f1f6fd875c2bf38f0946be0f9d44ec8864f9a889f613
   languageName: node
   linkType: hard
 
@@ -1630,7 +1613,7 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     ava: "npm:^6.0.0"
-    got: "npm:14.6.2"
+    got: "npm:14.6.3"
     hpagent: "npm:1.2.0"
     keyv-lru: "npm:3.0.4"
     koa: "npm:3.1.1"
