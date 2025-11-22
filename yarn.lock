@@ -903,9 +903,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"got@npm:14.6.3":
-  version: 14.6.3
-  resolution: "got@npm:14.6.3"
+"got@npm:14.6.4":
+  version: 14.6.4
+  resolution: "got@npm:14.6.4"
   dependencies:
     "@sindresorhus/is": "npm:^7.0.1"
     byte-counter: "npm:^0.1.0"
@@ -919,7 +919,7 @@ __metadata:
     p-cancelable: "npm:^4.0.1"
     responselike: "npm:^4.0.2"
     type-fest: "npm:^4.26.1"
-  checksum: 10c0/b5a2a0a8bfd44399f804c0875d0cfe832c32dd0067a25a965c0800ea58742a42135272dc1b30da477d70f1f6fd875c2bf38f0946be0f9d44ec8864f9a889f613
+  checksum: 10c0/ee8980feb842db876cffa42fa27da6d90cc1a9cfe2a38942f4b319cbb37c000e34919a7e5dea017a0fa53b0535c02d00426abbbf528d6a4e89c6eb07b2bde977
   languageName: node
   linkType: hard
 
@@ -1613,7 +1613,7 @@ __metadata:
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
     ava: "npm:^6.0.0"
-    got: "npm:14.6.3"
+    got: "npm:14.6.4"
     hpagent: "npm:1.2.0"
     keyv-lru: "npm:3.0.4"
     koa: "npm:3.1.1"
