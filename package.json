@@ -1,7 +1,7 @@
 {
   "type": "module",
   "dependencies": {
-    "got": "14.6.4",
+    "got": "14.6.5",
     "hpagent": "1.2.0",
     "keyv-lru": "3.0.4",
     "koa": "3.1.1"
@@ -15,5 +15,5 @@
   "devDependencies": {
     "ava": "^6.0.0"
   },
-  "packageManager": "yarn@4.11.0"
+  "packageManager": "yarn@4.12.0"
 }
