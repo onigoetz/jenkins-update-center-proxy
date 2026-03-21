@@ -8,12 +8,12 @@
   },
   "scripts": {
     "start": "node index.js",
-    "test:unit": "rm -rf cache/plugins && REMOTE_UPDATE_CENTER=http://localhost:65432/ GLOBAL_TIMEOUT=200 ava",
+    "test:unit": "rm -rf cache/plugins && REMOTE_UPDATE_CENTER=http://localhost:65432/ GLOBAL_TIMEOUT=200 rstest run",
     "test:e2e": "bash test.sh",
     "test": "yarn test:unit && yarn test:e2e"
   },
   "devDependencies": {
-    "ava": "^6.0.0"
+    "@rstest/core": "0.9.3"
   },
   "packageManager": "yarn@4.12.0"
 }

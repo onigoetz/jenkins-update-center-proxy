@@ -1,18 +1,18 @@
-import test from 'ava';
+import { test, expect, onTestFinished } from '@rstest/core';
 import Koa from "koa";
 import http from "http";
 import proxyMiddleware from "../lib/middlewares/proxy.js";
 
 const UPDATE_CENTER_PORT = 65432
 
-async function startLocalServer(t) {
+async function startLocalServer() {
   return new Promise((resolve) => {
     const app = new Koa();
     app.use(proxyMiddleware);
     const server = app.listen(() => {
       const { port } = server.address();
 
-      t.teardown(() => {
+      onTestFinished(() => {
         console.log("Stopping local server")
         server.close();
       })
@@ -22,13 +22,13 @@ async function startLocalServer(t) {
   })
 }
 
-async function startRemoteServer(t, handler) {
+async function startRemoteServer(handler) {
   return new Promise((resolve) => {
     const server = http
       .createServer(handler)
       .listen(UPDATE_CENTER_PORT, function() {
         resolve(server);
-        t.teardown(() => {
+        onTestFinished(() => {
           console.log("Stopping remote server")
           server.close();
         })
@@ -36,47 +36,43 @@ async function startRemoteServer(t, handler) {
   })
 }
 
-test.serial('replies with 404 on unmatched urls', async t => {
-  const port = await startLocalServer(t);
+test('replies with 404 on unmatched urls', async () => {
+  const port = await startLocalServer();
 
   const result = await fetch(`http://localhost:${port}/nonexistent`)
-  t.is(result.status, 404)
+  expect(result.status).toBe(404)
 });
 
-test.serial('replies with 500 on remote connection error (json)', async t => {
-  const port = await startLocalServer(t);
+test('replies with 500 on remote connection error (json)', async () => {
+  const port = await startLocalServer();
   const result = await fetch(`http://localhost:${port}/update-center.json`)
-  t.is(result.status, 500)
+  expect(result.status).toBe(500)
 });
 
-test.serial('replies with 500 on remote connection error (hpi)', async t => {
-  const port = await startLocalServer(t);
+test('replies with 500 on remote connection error (hpi)', async () => {
+  const port = await startLocalServer();
   const result = await fetch(`http://localhost:${port}/download/plugins/antisamy-markup-formatter/155.v795fb_8702324/antisamy-markup-formatter.hpi`)
-  t.is(result.status, 500)
+  expect(result.status).toBe(500)
 });
 
-test.serial('replies with 500 on remote connection hanging (json)', async t => {
-  t.timeout(10000);
+test('replies with 500 on remote connection hanging (json)', async () => {
+  const port = await startLocalServer();
 
-  const port = await startLocalServer(t);
-
-  await startRemoteServer(t, (req, res) => {
+  await startRemoteServer((req, res) => {
     console.log("got remote request, ignoring it", req.url)
   })
 
   const result = await fetch(`http://localhost:${port}/update-center.json`)
-  t.is(result.status, 500)
-});
+  expect(result.status).toBe(500)
+}, 10000);
 
-test.serial('replies with 500 on remote connection hanging (hpi)', async t => {
-  t.timeout(10000);
+test('replies with 500 on remote connection hanging (hpi)', async () => {
+  const port = await startLocalServer();
 
-  const port = await startLocalServer(t);
-
-  await startRemoteServer(t, (req, res) => {
+  await startRemoteServer((req, res) => {
     console.log("got remote request, ignoring it", req.url)
   })
 
   const result = await fetch(`http://localhost:${port}/download/plugins/antisamy-markup-formatter/155.v795fb_8702324/antisamy-markup-formatter.hpi`)
-  t.is(result.status, 500)
-});
+  expect(result.status).toBe(500)
+}, 10000);
