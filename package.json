@@ -13,7 +13,7 @@
     "test": "yarn test:unit && yarn test:e2e"
   },
   "devDependencies": {
-    "@rstest/core": "0.9.7"
+    "@rstest/core": "0.9.9"
   },
-  "packageManager": "yarn@4.14.0"
+  "packageManager": "yarn@4.14.1"
 }
