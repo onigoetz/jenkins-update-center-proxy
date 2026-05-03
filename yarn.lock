@@ -52,7 +52,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsbuild/core@npm:^2.0.0":
+"@rsbuild/core@npm:^2.0.3":
   version: 2.0.3
   resolution: "@rsbuild/core@npm:2.0.3"
   dependencies:
@@ -199,11 +199,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rstest/core@npm:0.9.9":
-  version: 0.9.9
-  resolution: "@rstest/core@npm:0.9.9"
+"@rstest/core@npm:0.9.10":
+  version: 0.9.10
+  resolution: "@rstest/core@npm:0.9.10"
   dependencies:
-    "@rsbuild/core": "npm:^2.0.0"
+    "@rsbuild/core": "npm:^2.0.3"
     "@types/chai": "npm:^5.2.3"
     tinypool: "npm:^2.1.0"
   peerDependencies:
@@ -216,7 +216,7 @@ __metadata:
       optional: true
   bin:
     rstest: bin/rstest.js
-  checksum: 10c0/812e8a28e3b8bde89a469fbc0b95b4c439c0c71610483ddbb94ff9a7d4eb5d0e1db4039ddd97f33cf4af1e7d8e8059336b527a7cbd3f7c27f43406dc516806f3
+  checksum: 10c0/b2bf7d396aa82a70dda45277f09f683f8bdef90fdb9e3e2198d117675f45e9023be7a8a5f1d8bd6b06dffe8e1879168cf8af3d6a3c0789b7642618d4728c15be
   languageName: node
   linkType: hard
 
@@ -715,7 +715,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@rstest/core": "npm:0.9.9"
+    "@rstest/core": "npm:0.9.10"
     got: "npm:14.6.6"
     hpagent: "npm:1.2.0"
     keyv-lru: "npm:3.0.4"
