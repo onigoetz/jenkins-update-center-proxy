@@ -4,7 +4,7 @@
     "got": "14.6.6",
     "hpagent": "1.2.0",
     "keyv-lru": "3.0.4",
-    "koa": "3.2.0"
+    "koa": "3.2.1"
   },
   "scripts": {
     "start": "node index.js",
@@ -13,7 +13,7 @@
     "test": "yarn test:unit && yarn test:e2e"
   },
   "devDependencies": {
-    "@rstest/core": "0.10.0"
+    "@rstest/core": "0.10.1"
   },
   "packageManager": "yarn@4.15.0"
 }
