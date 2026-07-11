@@ -15,5 +15,5 @@
   "devDependencies": {
     "@rstest/core": "0.11.0"
   },
-  "packageManager": "yarn@4.17.0"
+  "packageManager": "yarn@4.17.1"
 }
