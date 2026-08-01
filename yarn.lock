@@ -219,9 +219,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rstest/core@npm:0.11.3":
-  version: 0.11.3
-  resolution: "@rstest/core@npm:0.11.3"
+"@rstest/core@npm:0.11.4":
+  version: 0.11.4
+  resolution: "@rstest/core@npm:0.11.4"
   dependencies:
     "@rsbuild/core": "npm:~2.1.6"
     "@types/chai": "npm:^5.2.3"
@@ -235,7 +235,7 @@ __metadata:
       optional: true
   bin:
     rstest: ./bin/rstest.js
-  checksum: 10c0/88f8dd83fb8124524e67da646df13d4e4925dc0e237495d3daf078905b79fa672a85ad688f1addde9bf6b64bc020132f99f09fccd4c15ef75d3037f65bcdfd47
+  checksum: 10c0/d37372354c73b8cb63ed438dbab22240b5f07a62a55d8327e5f3614d7f51bccb6982ab75ae2aaf62cd4e8ecec12e165356f368478ebfb605e48a2be7de256544
   languageName: node
   linkType: hard
 
@@ -734,7 +734,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@rstest/core": "npm:0.11.3"
+    "@rstest/core": "npm:0.11.4"
     got: "npm:14.6.6"
     hpagent: "npm:1.2.0"
     keyv-lru: "npm:3.0.4"
