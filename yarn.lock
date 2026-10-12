@@ -53,8 +53,8 @@ __metadata:
   linkType: hard
 
 "@rsbuild/core@npm:~2.2.11":
-  version: 2.2.11
-  resolution: "@rsbuild/core@npm:2.2.11"
+  version: 2.2.12
+  resolution: "@rsbuild/core@npm:2.2.12"
   dependencies:
     "@rspack/core": "npm:~2.2.8"
     "@swc/helpers": "npm:^0.5.23"
@@ -65,7 +65,7 @@ __metadata:
       optional: true
   bin:
     rsbuild: ./bin/rsbuild.js
-  checksum: 10c0/50fda9c3247c42d9b29cffe9611ec25d6eaf8b5247f4d06d1ad8a5e50db8521e0d76a2e90e8c13648cad37fb40e234142e80d1ac38b086b2b37fdbb5bd5c07e0
+  checksum: 10c0/c216cdf096e1eff0cd3bbc77309a504c896dd929e88a952b3e74b4cbf9db5d524243ae5de91f3ad529f1310f75e841c2a4dc9cb605d6f4c89914772690d55299
   languageName: node
   linkType: hard
 
@@ -363,9 +363,9 @@ __metadata:
   linkType: hard
 
 "cjs-module-lexer@npm:^2.2.1":
-  version: 2.2.1
-  resolution: "cjs-module-lexer@npm:2.2.1"
-  checksum: 10c0/889777eb1e32c4662bf3744fdf09aca444a3f9373d70a8c3d2a575e845e415988912a70a7b5e3c2bf943c7547d930dff641c4e0ff2ee2110ba1daca05b2310cd
+  version: 2.3.0
+  resolution: "cjs-module-lexer@npm:2.3.0"
+  checksum: 10c0/9a6b9ca6f3c4734e108afa7a9cdf9ebf180329e1f94729a8a054102b2d66f5bbd62beb6a7b25ed8b0feca561c96542f34583fe5f0a72691751ff3ab718f5690f
   languageName: node
   linkType: hard
 
@@ -527,9 +527,9 @@ __metadata:
   linkType: hard
 
 "http-cache-semantics@npm:^4.2.0":
-  version: 4.2.0
-  resolution: "http-cache-semantics@npm:4.2.0"
-  checksum: 10c0/45b66a945cf13ec2d1f29432277201313babf4a01d9e52f44b31ca923434083afeca03f18417f599c9ab3d0e7b618ceb21257542338b57c54b710463b4a53e37
+  version: 4.3.0
+  resolution: "http-cache-semantics@npm:4.3.0"
+  checksum: 10c0/b9668e271b4a99cba067bfa6f286b12eff1408a24e090ca16f0f5fa826ac07f67b4b8c7aa6e7458596d890683f3c172f647a00ca516a8f0158c80d7e4ebe0316
   languageName: node
   linkType: hard
 
