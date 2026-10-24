@@ -52,9 +52,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rsbuild/core@npm:~2.2.11":
-  version: 2.2.13
-  resolution: "@rsbuild/core@npm:2.2.13"
+"@rsbuild/core@npm:~2.2.13":
+  version: 2.2.14
+  resolution: "@rsbuild/core@npm:2.2.14"
   dependencies:
     "@rspack/core": "npm:~2.2.9"
     "@swc/helpers": "npm:^0.5.23"
@@ -65,7 +65,7 @@ __metadata:
       optional: true
   bin:
     rsbuild: ./bin/rsbuild.js
-  checksum: 10c0/4de7821f4645641512bee22bf7efdfb959691c8a5b593f282264db57a1d52142d95002d9642e100e15719f1abac1d9f3375bb0ca16f0a7488ced3b67af61ba5d
+  checksum: 10c0/b54e0b44fef1f926eb34fd2b82a39eabacda0b32cf2dcff44fd241d2f6199ced653f9dfc620def0473ef4aa7b098a04f812c6e46850c3ff031671ce35e7bf96a
   languageName: node
   linkType: hard
 
@@ -239,13 +239,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@rstest/core@npm:0.12.3":
-  version: 0.12.3
-  resolution: "@rstest/core@npm:0.12.3"
+"@rstest/core@npm:0.12.4":
+  version: 0.12.4
+  resolution: "@rstest/core@npm:0.12.4"
   dependencies:
-    "@rsbuild/core": "npm:~2.2.11"
+    "@rsbuild/core": "npm:~2.2.13"
     "@types/chai": "npm:^5.2.3"
-    cjs-module-lexer: "npm:^2.2.1"
+    cjs-module-lexer: "npm:^2.3.0"
   peerDependencies:
     happy-dom: ^20.8.3
     jsdom: ">=15.0.0"
@@ -256,7 +256,7 @@ __metadata:
       optional: true
   bin:
     rstest: ./bin/rstest.js
-  checksum: 10c0/748fb390f0dad0d1a7184e0b5a8fe6eed9fa543fcf2752535da31b6a88ccc7b99bcacdc933afdd5be92dbb67fca3c0aaebfc84bb0e6fd905e373bd8add0a26fc
+  checksum: 10c0/93094db1a4ba402efd98a991652b5ffc27f08e04c43077cd55e0505f7c2c249a4d51ade44f7f07e1aa7b33116ba3dc863f7736b70b94abcf270e2d2df112e286
   languageName: node
   linkType: hard
 
@@ -362,7 +362,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cjs-module-lexer@npm:^2.2.1":
+"cjs-module-lexer@npm:^2.3.0":
   version: 2.3.0
   resolution: "cjs-module-lexer@npm:2.3.0"
   checksum: 10c0/9a6b9ca6f3c4734e108afa7a9cdf9ebf180329e1f94729a8a054102b2d66f5bbd62beb6a7b25ed8b0feca561c96542f34583fe5f0a72691751ff3ab718f5690f
@@ -760,7 +760,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@rstest/core": "npm:0.12.3"
+    "@rstest/core": "npm:0.12.4"
     got: "npm:14.6.6"
     hpagent: "npm:1.2.0"
     keyv-lru: "npm:3.0.4"
