@@ -1,4 +1,4 @@
-FROM node:22-alpine
+FROM node:24.22.1-alpine
 
 # Set cache dir for nodejs
 ENV CACHE_DIR="/cache"
